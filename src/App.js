@@ -1,14 +1,18 @@
-import './App.css';
+import './static/App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import CreateGame from './pages/CreateGame';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <form action="/post" method="POST" className="testForm">
-          <button>Connected?</button>
-        </form>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route  path="/">
+          <Route  index element={<Home />}/>
+          <Route path="CreateGame" element={<CreateGame />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
