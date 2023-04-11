@@ -1,3 +1,5 @@
+import React from 'react'
+
 function CreateGame() {
     return(
         <h1>Hello World from the create games page!</h1>
